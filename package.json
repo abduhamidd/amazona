@@ -5,16 +5,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-"start": "nodemon --watch  backend --exec node --experimental-modules backend/server.js"
+    "start": "nodemon --watch  backend --exec node --experimental-modules backend/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "json-web-token": "^3.2.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.8",
     "nodemon": "^2.0.6"
   }

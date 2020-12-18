@@ -2,13 +2,18 @@ import express from 'express';
 import mongoose from 'mongoose';
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
-
+import dotenv from 'dotenv';
 const app = express();
+
 mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/amazona9', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
 });
+
+dotenv.config();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);

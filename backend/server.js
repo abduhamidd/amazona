@@ -16,6 +16,7 @@ mongoose.connect(
 );
 
 dotenv.config();
+console.log(process.env.MONGODB_URL);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
